@@ -24,6 +24,9 @@ export const Elevator = ({ level, queue }: ElevatorProps) => {
   // each level should be 10% of the total height
   const offset = (level / 10) * 100
 
+  const centerDiv =
+    'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+
   return (
     <div
       className="relative flex justify-center rounded-2xl bg-amber-200 w-32 h-[10%] p-2 border-black transition-all duration-500 ease-in-out"
@@ -33,6 +36,9 @@ export const Elevator = ({ level, queue }: ElevatorProps) => {
       }}
     >
       <div className="bg-white h-2 w-20 rounded" />
+      <div className={`text-black text-2xl font-bold ${centerDiv}`}>
+        {level}
+      </div>
       <div
         className="absolute bg-slate-600 h-full w-full rounded-2xl top-0"
         style={{
