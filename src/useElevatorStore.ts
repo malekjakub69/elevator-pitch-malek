@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export const useElevatorStore = () => {
   const [currentFloor, setCurrentFloor] = useState<number>(1)
-  const [queue, setQueue] = useState<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  const [queue, setQueue] = useState<number[]>([])
 
   useEffect(() => {
     if (queue.length > 0) {
