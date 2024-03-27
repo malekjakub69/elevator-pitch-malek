@@ -22,8 +22,8 @@ export const useElevatorStore = () => {
 
   const addRequest = (floor: number) => {
     if (queue.includes(floor)) return
+    if (currentFloor === floor) return
     setQueue((prev) => [...prev, floor])
-    console.log('Queue:', queue)
   }
 
   return { addRequest, currentFloor, queue }

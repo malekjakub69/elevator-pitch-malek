@@ -11,7 +11,6 @@ export const Elevator = ({ level, queue }: ElevatorProps) => {
   useEffect(() => {
     if (queue.length > 0) {
       setCloseElevator(true)
-      console.log('Queue:', queue)
       // Nastavíme časovač, který odstraní první prvek pole po 1 sekundě
       const timer = setTimeout(() => {
         setCloseElevator(false)
